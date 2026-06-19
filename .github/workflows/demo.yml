@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Testjobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test step
+        run: echo "Congrats, You passed test"
+
+    
