@@ -1,15 +1,18 @@
 name: Test
 
 on:
-  push:
-    branches: [main]
-
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name"
+        type: string
+        required: true
 jobs:
   Testjobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test step
-        run: echo "Congrats, You passed test"
+      - name: Name
+        run: echo "Hi ${{inputs.name}}"
 
     
